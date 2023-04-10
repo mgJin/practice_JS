@@ -1,7 +1,9 @@
-const age = parseInt(prompt("hhh"));
-
-if(!isNaN(age)){
-    console.log("please write a number");
-}else if(age >= 19 && age<=50){
-    
+const loginForm = document.querySelector(".login-form");
+const inputBox = document.querySelector(".login-form input")
+function printing(event){
+  console.log(event);
+  event.preventDefault();
+  const inputValue = inputBox.value;
+  console.log(inputValue);
 }
+loginForm.addEventListener("submit",printing)
