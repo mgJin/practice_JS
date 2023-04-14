@@ -35,7 +35,9 @@ function saveToDos(){
 
 
 function deleteToDo(event){
-    const li = event.target.parentNode;
+    const li = event.target.parentNode; //node 즉 span의 부모인 li를 가져옴
+    console.log(event);
+    console.log(event.target);
     toDos = toDos.filter((todo)=>{return todo.id!==parseInt(li.id)});
     saveToDos();
     li.remove();
