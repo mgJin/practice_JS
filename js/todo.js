@@ -7,12 +7,20 @@ let toDos = [];
 
 /**li와 span을 만들고 그것에 내용을 입력해주는 함수 */
 function paintToDo(newTodoObj){
+    toDoList.style.backgroundColor = "white";
     const li = document.createElement("li");
+    
+    // li.style.float = "left";
     li.id = newTodoObj.id;
    
     const span = document.createElement("span");
+    // span.style.float = "left";
     span.innerText = newTodoObj.text;
     const button = document.createElement("button");
+    
+    button.style.backgroundColor="transparent";
+    button.style.borderColor = "white";
+    button.style.textAlign = "center";
     button.innerText="❌";
     button.addEventListener("click",deleteToDo);
     li.appendChild(span); 
